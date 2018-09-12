@@ -134,7 +134,7 @@ ifeq ($(src_name),binutils)
     else ifeq ($(DEB_HOST_ARCH),ppc64)
       CROSS_ARCHS = ppc64el
     else ifeq ($(DEB_HOST_ARCH),ppc64el)
-      CROSS_ARCHS = powerpc ppc64 amd64 i386 x32
+      CROSS_ARCHS = powerpc ppc64 amd64 i386 x32 armel armhf arm64
     else
       CROSS_ARCHS =
     endif
@@ -163,9 +163,9 @@ ifneq (,$(ADT_TEST_TRIGGERS))
   with_multiarch :=
 endif
 
-HOST_ARCHS_armhf = amd64 i386 x32 arm64
-HOST_ARCHS_armel = amd64 i386 x32 arm64
-HOST_ARCHS_arm64 = amd64 i386 x32
+HOST_ARCHS_armhf = amd64 i386 x32 arm64 ppc64el
+HOST_ARCHS_armel = amd64 i386 x32 arm64 ppc64el
+HOST_ARCHS_arm64 = amd64 i386 x32 ppc64el
 HOST_ARCHS_mips = amd64 i386 x32
 HOST_ARCHS_mipsel = amd64 i386 x32
 HOST_ARCHS_powerpc = amd64 i386 x32 ppc64el

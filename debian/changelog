@@ -1,3 +1,31 @@
+binutils (2.30-21ubuntu1~18.04) bionic-proposed; urgency=medium
+
+  * SRU: LP: #1769657
+  * Build cross packages for armel, armhf, arm64 on ppc64el.
+
+ -- Matthias Klose <doko@ubuntu.com>  Wed, 12 Sep 2018 17:38:08 +0200
+
+binutils (2.30-21ubuntu1) cosmic; urgency=medium
+
+  * Merge with Debian; remaining changes:
+    - Build from upstream sources.
+
+ -- Matthias Klose <doko@ubuntu.com>  Tue, 29 May 2018 15:51:24 +0200
+
+binutils (2.30-21) unstable; urgency=medium
+
+  * Update, taken from the 2.30 branch 20180529.
+    - x86-64: Add TLSDESC fields to elf_x86_lazy_plt_layout.
+    - PR binutils/23199, mark section in a section group with SHF_GROUP.
+    - PR ld/23194, x86: Don't set eh->local_ref to 1 for versioned symbol.
+    - PR ld/23189, x86: Don't set eh->local_ref to 1 for linker defined symbols.
+    - PR binutils/23199, Invalid SHT_GROUP entry leads to group confusion.
+  * Fix PR gprof/23056, memory corruption in gprof. LP: #1763098.
+  * Fix PR binutils/23054, memory corruption in as. LP: #1763096.
+  * Fix PR ld/23055, memory corruption in ld. LP: #1763094.
+
+ -- Matthias Klose <doko@debian.org>  Tue, 29 May 2018 15:46:35 +0200
+
 binutils (2.30-20ubuntu2~18.04) bionic-security; urgency=medium
 
   * Combined security update / SRU: LP: #1771635, LP: #1769657.

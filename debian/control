@@ -244,7 +244,7 @@ Description: GNU binary utilities, for i686-linux-gnu target (debug symbols)
 
 Package: binutils-aarch64-linux-gnu
 Priority: optional
-Architecture: arm64 amd64 i386 x32
+Architecture: arm64 amd64 i386 x32 ppc64el
 Multi-Arch: foreign
 Depends: binutils-common (= ${binary:Version}),
   ${shlibs:Depends}, ${extraDepends}
@@ -262,7 +262,7 @@ Description: GNU binary utilities, for aarch64-linux-gnu target
 Package: binutils-aarch64-linux-gnu-dbg
 Section: debug
 Priority: optional
-Architecture: arm64 amd64 i386 x32
+Architecture: arm64 amd64 i386 x32 ppc64el
 Multi-Arch: foreign
 Depends: binutils-aarch64-linux-gnu (= ${binary:Version})
 Description: GNU binary utilities, for aarch64-linux-gnu target (debug symbols)
@@ -270,7 +270,7 @@ Description: GNU binary utilities, for aarch64-linux-gnu target (debug symbols)
 
 Package: binutils-arm-linux-gnueabihf
 Priority: optional
-Architecture: armhf amd64 i386 x32 arm64
+Architecture: armhf amd64 i386 x32 arm64 ppc64el
 Multi-Arch: foreign
 Depends: binutils-common (= ${binary:Version}),
   ${shlibs:Depends}, ${extraDepends}
@@ -288,7 +288,7 @@ Description: GNU binary utilities, for arm-linux-gnueabihf target
 Package: binutils-arm-linux-gnueabihf-dbg
 Section: debug
 Priority: optional
-Architecture: armhf amd64 i386 x32 arm64
+Architecture: armhf amd64 i386 x32 arm64 ppc64el
 Multi-Arch: foreign
 Depends: binutils-arm-linux-gnueabihf (= ${binary:Version})
 Description: GNU binary utilities, for arm-linux-gnueabihf target (debug symbols)
@@ -296,7 +296,7 @@ Description: GNU binary utilities, for arm-linux-gnueabihf target (debug symbols
 
 Package: binutils-arm-linux-gnueabi
 Priority: optional
-Architecture: armel amd64 i386 x32 arm64
+Architecture: armel amd64 i386 x32 arm64 ppc64el
 Multi-Arch: foreign
 Depends: binutils-common (= ${binary:Version}),
   ${shlibs:Depends}, ${extraDepends}
@@ -314,7 +314,7 @@ Description: GNU binary utilities, for arm-linux-gnueabi target
 Package: binutils-arm-linux-gnueabi-dbg
 Section: debug
 Priority: optional
-Architecture: armel amd64 i386 x32 arm64
+Architecture: armel amd64 i386 x32 arm64 ppc64el
 Multi-Arch: foreign
 Depends: binutils-arm-linux-gnueabi (= ${binary:Version})
 Description: GNU binary utilities, for arm-linux-gnueabi target (debug symbols)
