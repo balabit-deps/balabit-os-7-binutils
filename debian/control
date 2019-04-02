@@ -400,7 +400,7 @@ Description: GNU binary utilities, for mips64el-linux-gnuabi64 target (debug sym
 
 Package: binutils-powerpc64le-linux-gnu
 Priority: optional
-Architecture: ppc64el amd64 i386 x32 ppc64
+Architecture: ppc64el amd64 i386 x32 ppc64 arm64
 Multi-Arch: foreign
 Depends: binutils-common (= ${binary:Version}),
   ${shlibs:Depends}, ${extraDepends}
@@ -418,7 +418,7 @@ Description: GNU binary utilities, for powerpc64le-linux-gnu target
 Package: binutils-powerpc64le-linux-gnu-dbg
 Section: debug
 Priority: optional
-Architecture: ppc64el amd64 i386 x32 ppc64
+Architecture: ppc64el amd64 i386 x32 ppc64 arm64
 Multi-Arch: foreign
 Depends: binutils-powerpc64le-linux-gnu (= ${binary:Version})
 Description: GNU binary utilities, for powerpc64le-linux-gnu target (debug symbols)
@@ -426,7 +426,7 @@ Description: GNU binary utilities, for powerpc64le-linux-gnu target (debug symbo
 
 Package: binutils-s390x-linux-gnu
 Priority: optional
-Architecture: s390x amd64 i386 x32
+Architecture: s390x amd64 i386 x32 arm64 ppc64el
 Multi-Arch: foreign
 Depends: binutils-common (= ${binary:Version}),
   ${shlibs:Depends}, ${extraDepends}
@@ -444,7 +444,7 @@ Description: GNU binary utilities, for s390x-linux-gnu target
 Package: binutils-s390x-linux-gnu-dbg
 Section: debug
 Priority: optional
-Architecture: s390x amd64 i386 x32
+Architecture: s390x amd64 i386 x32 arm64 ppc64el
 Multi-Arch: foreign
 Depends: binutils-s390x-linux-gnu (= ${binary:Version})
 Description: GNU binary utilities, for s390x-linux-gnu target (debug symbols)
@@ -660,7 +660,7 @@ Description: GNU binary utilities, for powerpc64-linux-gnu target (debug symbols
 
 Package: binutils-riscv64-linux-gnu
 Priority: optional
-Architecture: amd64 i386 x32
+Architecture: amd64 i386 x32 arm64 ppc64el
 Multi-Arch: foreign
 Depends: binutils-common (= ${binary:Version}),
   ${shlibs:Depends}, ${extraDepends}
@@ -678,7 +678,7 @@ Description: GNU binary utilities, for riscv64-linux-gnu target
 Package: binutils-riscv64-linux-gnu-dbg
 Section: debug
 Priority: optional
-Architecture: amd64 i386 x32
+Architecture: amd64 i386 x32 arm64 ppc64el
 Multi-Arch: foreign
 Depends: binutils-riscv64-linux-gnu (= ${binary:Version})
 Description: GNU binary utilities, for riscv64-linux-gnu target (debug symbols)
