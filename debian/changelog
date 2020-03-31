@@ -1,3 +1,143 @@
+binutils (2.30-21ubuntu1~18.04.3) bionic-security; urgency=medium
+
+  * SECURITY UPDATE: DoS via a large attribute section
+    - debian/patches/CVE-2018-8945.patch: prevent a memory exhaustion
+      failure when running objdump on a fuzzed input file with corrupt
+      string and attribute sections.
+    - CVE-2018-8945
+    - CVE-2018-13033
+  * SECURITY UPDATE: stack Exhaustion in C++ demangling
+    - debian/patches/CVE-2018-9138.patch: limit recusion and add
+      --no-recruse-limit option to tools that support name demangling.
+    - debian/patches/CVE-2018-9138-2.patch: fix a failure in the libiberty
+      testsuite by increasing the recursion limit to 2048.
+    - CVE-2018-9138
+    - CVE-2018-12641
+    - CVE-2018-12697
+    - CVE-2018-12698
+    - CVE-2018-12699
+    - CVE-2018-12700
+    - CVE-2018-17794
+    - CVE-2018-17985
+    - CVE-2018-18484
+    - CVE-2018-18700
+    - CVE-2018-18701
+  * SECURITY UPDATE: denial of service via crafted binary file
+    - debian/patches/CVE-2018-10372.patch: fix illegal memory access when
+      parsing corrupt DWARF information.
+    - CVE-2018-10372
+  * SECURITY UPDATE: denial of service via crafted binary file
+    - debian/patches/CVE-2018-10373.patch: add a check for a NULL table
+      pointer before attempting to compute a DWARF filename.
+    - CVE-2018-10373
+  * SECURITY UPDATE: out-of-bounds memory write
+    - debian/patches/CVE-2018-10534.patch: fix an illegal memory access
+      when copying a PE format file with corrupt debug information.
+    - CVE-2018-10534
+  * SECURITY UPDATE: denial of service via crafted file
+    - debian/patches/CVE-2018-10535.patch: fix an illegal memory access
+      when trying to copy an ELF binary with corrupt section symbols.
+    - CVE-2018-10535
+  * SECURITY UPDATE: excessive memory consumption
+    - debian/patches/CVE-2018-12934.patch: remove support for demangling
+      GCC 2.x era mangling schemes.
+    - debian/patches/CVE-2018-12934-2.patch: remove support for old gnu v2
+      name mangling.
+    - CVE-2018-12934
+    - CVE-2018-18483
+  * SECURITY UPDATE: denial of service via crafted ELF file
+    - debian/patches/CVE-2018-1735x.patch: fix two segment faults in nm.
+    - CVE-2018-17358
+    - CVE-2018-17359
+  * SECURITY UPDATE: heap-based buffer over-read
+    - debian/patches/CVE-2018-17360.patch: fix buffer overflow.
+    - CVE-2018-17360
+  * SECURITY UPDATE: DoS via invalid memory address
+    - debian/patches/CVE-2018-18309.patch: add _bfd_clear_contents bounds
+      checking.
+    - CVE-2018-18309
+  * SECURITY UPDATE: DoS via heap-based buffer over-read
+    - debian/patches/CVE-2018-18605.patch: fix buffer overflow in
+      sec_merge_hash_lookup.
+    - CVE-2018-18605
+  * SECURITY UPDATE: DoS via NULL pointer dereference
+    - debian/patches/CVE-2018-18606.patch: fix NULL pointer dereference in
+      merge_strings.
+    - CVE-2018-18606
+  * SECURITY UPDATE: DoS via NULL pointer dereference
+    - debian/patches/CVE-2018-18607.patch: fix NULL pointer dereference in
+      elf_link_input_bfd.
+    - CVE-2018-18607
+  * SECURITY UPDATE: heap-based buffer overflow in bfd_elf32_swap_phdr_in
+    - debian/patches/CVE-2018-19931.patch: Fix a memory exhaustion bug when
+      attempting to allocate room for an impossible number of program
+      headers.
+    - CVE-2018-19931
+  * SECURITY UPDATE: integer overflow and infinite loop
+    - debian/patches/CVE-2018-19932.patch: remove an abort in the bfd
+      library and add a check for an integer overflow when mapping sections
+      to segments.
+    - CVE-2018-19932
+  * SECURITY UPDATE: memory leak via crafted ELF file
+    - debian/patches/CVE-2018-20002.patch: fix memory leak in
+      _bfd_generic_read_minisymbols.
+    - CVE-2018-20002
+  * SECURITY UPDATE: use-after-free in error function
+    - debian/patches/CVE-2018-20623.patch: fix a heap use after free memory
+      access fault when displaying error messages about malformed archives.
+    - CVE-2018-20623
+  * SECURITY UPDATE: NULL pointer deref in elf_link_add_object_symbols
+    - debian/patches/CVE-2018-20651.patch: fix Invalid Memory Address
+      Dereference in elf_link_add_object_symbols.
+    - CVE-2018-20651
+  * SECURITY UPDATE: heap-based buffer overflow via a crafted section size
+    - debian/patches/CVE-2018-20671.patch: fix a possible integer overflow
+      problem when examining corrupt binaries using a 32-bit binutil.
+    - CVE-2018-20671
+  * SECURITY UPDATE: code exec via integer overflow triggered heap overflow
+    - debian/patches/CVE-2018-1000876.patch: detect long overflows.
+    - CVE-2018-1000876
+  * SECURITY UPDATE: stack consumption and heap-based buffer over-read
+    - debian/patches/CVE-2019-907x.patch: reject negative lengths and add
+      recursion counter.
+    - CVE-2019-9070
+    - CVE-2019-9071
+  * SECURITY UPDATE: excessive memory allocation
+    - debian/patches/CVE-2019-9073.patch: check for incomplete data.
+    - CVE-2019-9073
+  * SECURITY UPDATE: out-of-bounds read leading to a SEGV
+    - debian/patches/CVE-2019-9074.patch: correct checks attempting to
+      prevent read past end of section.
+    - CVE-2019-9074
+  * SECURITY UPDATE: heap-based buffer overflow
+    - debian/patches/CVE-2019-9075.patch: fix heap buffer overflow in
+      _bfd_archive_64_bit_slurp_armap.
+    - CVE-2019-9075
+  * SECURITY UPDATE: heap-based buffer overflow
+    - debian/patches/CVE-2019-9077.patch: fix a illegal memory access fault
+      when parsing a corrupt MIPS option section using readelf.
+    - CVE-2019-9077
+  * SECURITY UPDATE: heap-based buffer over-read in _bfd_doprnt
+    - debian/patches/CVE-2019-12972.patch: fix string table corruption.
+    - CVE-2019-12972
+  * SECURITY UPDATE: integer overflow and heap-based buffer overflow
+    - debian/patches/CVE-2019-14250.patch: check zero value shstrndx.
+    - CVE-2019-14250
+  * SECURITY UPDATE: write access violation via ELF file
+    - debian/patches/CVE-2019-14444.patch: catch potential integer overflow
+      in readelf when processing corrupt binaries.
+    - CVE-2019-14444
+  * SECURITY UPDATE: DoS via crafted ELF file
+    - debian/patches/CVE-2019-17450.patch: fix stack overflow in function
+      find_abstract_instance.
+    - CVE-2019-17450
+  * SECURITY UPDATE: integer overflow leading to a SEGV
+    - debian/patches/CVE-2019-17451.patch: fix SEGV in function
+      _bfd_dwarf2_find_nearest_line.
+    - CVE-2019-17451
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Tue, 31 Mar 2020 16:26:27 -0400
+
 binutils (2.30-21ubuntu1~18.04.2) bionic; urgency=medium
 
   * No-change rebuild strictly against -security only (LP: #1828171).
