@@ -1,3 +1,10 @@
+binutils (2.30-21ubuntu1~18.04.4) bionic; urgency=medium
+
+  * d/p/lp-1883880-x86-don-t-mistakenly-scale-non-8-bit-displacements.patch:
+    avoid scaling displacements that breaks e.g. some AVX512 code (LP: #1883880)
+
+ -- Christian Ehrhardt <christian.ehrhardt@canonical.com>  Thu, 18 Jun 2020 13:03:55 +0200
+
 binutils (2.30-21ubuntu1~18.04.3) bionic-security; urgency=medium
 
   * SECURITY UPDATE: DoS via a large attribute section
