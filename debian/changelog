@@ -1,3 +1,12 @@
+binutils (2.30-21ubuntu1~18.04.5) bionic; urgency=medium
+
+  * d/p/lp1903814-lp1903814-s390_prevent_GOT_access.patch:
+    Prevent GOT access rewrite for certain symbols (LP: #1903814)
+    Thanks to Ilya Leoshkevich for porting the upstream patch to v2.30:
+    https://sourceware.org/git/?p=binutils-gdb.git;a=commit;h=e6213e09ed0ef6ee40d00981c38baac6964aa95b
+
+ -- Lukas Märdian <slyon@ubuntu.com>  Fri, 12 Feb 2021 09:45:35 +0100
+
 binutils (2.30-21ubuntu1~18.04.4) bionic; urgency=medium
 
   * d/p/lp-1883880-x86-don-t-mistakenly-scale-non-8-bit-displacements.patch:

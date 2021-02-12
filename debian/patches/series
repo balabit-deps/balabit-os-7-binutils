@@ -82,3 +82,4 @@ CVE-2019-14444.patch
 CVE-2019-17450.patch
 CVE-2019-17451.patch
 lp-1883880-x86-don-t-mistakenly-scale-non-8-bit-displacements.patch
+lp1903814-s390_prevent_GOT_access.patch
